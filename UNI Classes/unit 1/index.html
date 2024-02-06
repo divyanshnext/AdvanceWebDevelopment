@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revising Html</title>
+
+
+    <style>
+      .container{
+        border: 2px solid black;
+        width: 500px;
+        height: 500px;
+        margin:auto;
+        padding:20px;
+        background-color : green;
+      }
+      input{
+        margin:10px;
+      }
+      label{
+        margin:10px;
+      }
+      textarea{
+        margin:10px;
+      }
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+  <!-- <h1>ordered list</h1>
+    <ol>
+      <li>chocolate </li>
+      <li>black forest</li>
+      <li>pineapple cake</li>
+    </ol>
+    <h1>Unordered list</h1>
+    <ul>
+      <li>fasten your seat belt</li>
+      <li>get set ready go</li>
+      <li>look around and go</li>
+    </ul>
+    <h1>definition list</h1>
+    <dl>
+      <dt>item 1</dt>
+      <dd>item 1 description </dd>
+      <dt>item 2</dt>
+      <dd>item 2 description</dd>
+    </dl> -->
+
+
+
+
+
+<!-- HTML forms -->
+<!-- 
+text field
+password fields
+radio buttons
+checkboxes
+file
+textarea
+selectbox
+submitbutton and resetbutton 
+-->
+
+<center>Don't have account ? wanna join us ? </center>
+<div class="container">
+        <table>
+        <!-- Text Input -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required maxlength="30">
+        <br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required minlength="8">
+        <br>
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="example@example.com" required>
+        <br>
+        <!-- Radio Buttons -->
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" checked>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <br>
+        <!-- Checkbox -->
+        <input type="checkbox" id="subscribe" name="subscribe" checked>
+        <label for="subscribe">Subscribe to newsletter</label>
+        <br>
+        <!-- Select Dropdown -->
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="uk">India</option>
+        </select>
+        <br>
+        <!-- Textarea -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+        <br>
+        <!-- File Input -->
+        <label for="file">Upload File:</label>
+        <input type="file" id="file" name="file">
+        <br>
+        <!-- Submit Button -->
+        <button type="submit">Submit</button>
+    </form>
+
+    using legend
+    
+  </table>
+
+
+
+</div>
+</body>
+</html>
