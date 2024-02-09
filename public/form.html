@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON INPUT FORM</title>
+</head>
+<body>
+    <h2>Enter JSON data:</h2>
+    <form id="jsonForm">
+        <label for="jsonData">Enter JSON data:</label>
+        <textarea id="jsonData" name="jsonData" rows="4" cols="50" required></textarea>
+        <br>
+        <button type="button" onclick="convertToJson()">Save JSON Data</button>
+    </form>
+
+    <script>
+        function convertToJson() {
+            const jsonData = document.getElementById('jsonData').value;
+            const json = JSON.parse(jsonData);
+
+            fetch('/save-json', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ jsonData: json })
+            }).then(response => {
+                if (response.ok) {
+                    alert('JSON data received and saved');
+                } else {
+                    alert('Error saving JSON data');
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+</html>

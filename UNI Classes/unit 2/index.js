@@ -1,11 +1,13 @@
-// we are going to import http module  // it comes preinstalled with npm package 
+//creating a node js app
 
 const http = require('http');
 
-const server = http.createServer((req,res) => {     // request will be send by browser & respond will be sen by server 
-    res.end('hello, this is my node js server !');
+const server = http.createServer((req,res) => {    // request done by browser and response by sever  
+    res.end("hello,this is your Node.js server!");
 });
 
-const port = 3000; // we are listening to a request to a new port number  
+const port = 3500;
+server.listen(port,() => console.log('congrats your first node app : Server is running on http://localhost:${port}'));
 
-server.listen(port,() => console.log("Server is running on https://localhost:${port}")); // all the request will be listened on 3000 port number 
+
+

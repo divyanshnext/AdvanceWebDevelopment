@@ -1,9 +1,11 @@
 const http = require('http');
 const fs = require('fs');
+const querystring = require('querystring');
+const path = require('path');
 
 const server = http.createServer((req, res) => {
     if (req.url === "/") {
-        fs.readFile('public/form.html', 'utf8', (err, data) => {
+        fs.readFile(path.join(__dirname, 'public', 'form.html'), 'utf8', (err, data) => {
             if (err) {
                 console.error(err);
                 res.end("There is some error");
@@ -15,13 +17,21 @@ const server = http.createServer((req, res) => {
         let body = "";
 
         req.on('data', (chunk) => {
-            console.log(chunk)
             body += chunk;
         });
 
         req.on('end', () => {
-            console.log(body);
-            res.end('JSON data received and saved');
+            const jsonData = JSON.parse(body);
+            const jsonString = JSON.stringify(jsonData);
+
+            fs.writeFile(path.join(__dirname, 'public', 'new.json'), jsonString, (err) => {
+                if (err) {
+                    console.error(err);
+                    res.end("Check console for error!");
+                } else {
+                    res.end('JSON data received and saved');
+                }
+            });
         });
     }
 });
@@ -29,5 +39,3 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
-
-// server .listen ka ek shortcut bhi h use bhi dekho ???????
