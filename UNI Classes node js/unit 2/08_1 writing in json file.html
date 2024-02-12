@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON INPUT FORM</title>
+</head>
+<body>
+    <h2>enter JSON data:</h2>
+    <form action = '/save-json' method="post">
+        
+        <label for="jsonData">Enter JSON data:</label>
+        <textarea id="jsonData" name="jsonData" rows="4" cols="50" required></textarea>
+        <!-- //In web development, it's important to provide labels for form elements to improve accessibility 
+            and help users understand the purpose of each input field. You can add a label for the 
+            textarea element like this: -->
+        <br>
+        <button type="submit">Save JSON Data</button>
+    </form>
+</body>
+</html>
+
