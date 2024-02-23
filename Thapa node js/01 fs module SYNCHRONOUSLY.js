@@ -16,4 +16,6 @@ const fs = require("fs");
 // console.log(buf_data1);   
 
 
-fs.unlinkSync("read.txt");
+// fs.unlinkSync("read.txt"); // to delete the file which was created to read and write 
+
+    

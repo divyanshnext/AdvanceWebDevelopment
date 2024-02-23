@@ -123,7 +123,7 @@
 
 
 //----------------- type coercion ---------------------:
-//when operars are used with different data types . values are automatically converted to a common type during operation
+//when operators are used with different data types . values are automatically converted to a common type during operation
 
 // let result = 5+"5"; // can u try with a minus (-) ? funny ?
 // console.log(result);
